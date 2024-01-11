@@ -1,6 +1,6 @@
 package com.toywar94.redis.service;
 
-import org.assertj.core.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -24,7 +24,7 @@ public class RedisConnectionTests {
         valueOperations.set(key, data);
 
         final String str = valueOperations.get(key);
-        Assertions.assertThat(str).isEqualTo(data);
+        assertEquals(1, str);
 
     }
 }
